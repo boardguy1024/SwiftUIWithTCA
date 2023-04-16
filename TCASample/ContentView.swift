@@ -5,17 +5,28 @@
 //  Created by パク on 2023/04/09.
 //
 
+import ComposableArchitecture
 import SwiftUI
 
+
 struct ContentView: View {
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+
+
+        UserListView(store: .init(initialState: UserListState(),
+                                  reducer: userListReducer,
+                                  environment: UserListEnvironment(fetchUsers: APIClient.fetchUsers)
+                                 ))
+
+
+      //  NavigationView {
+//            TwoCountersView(store: Store(initialState: TwoCountersState(),
+//                                         reducer: twoCountersReducer,
+//                                         environment: TwoCountersEnvironment()))
+
+
+      //  }
     }
 }
 

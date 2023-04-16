@@ -11,6 +11,12 @@
 		2D44F67A29E3049F005D63BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D44F67929E3049F005D63BA /* ContentView.swift */; };
 		2D44F67C29E304A1005D63BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D44F67B29E304A1005D63BA /* Assets.xcassets */; };
 		2D44F67F29E304A1005D63BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D44F67E29E304A1005D63BA /* Preview Assets.xcassets */; };
+		2D44F68729E3052F005D63BA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 2D44F68629E3052F005D63BA /* ComposableArchitecture */; };
+		2D8FF31829EAD48100ED3798 /* CounterViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8FF31729EAD48100ED3798 /* CounterViewSample.swift */; };
+		2D8FF31B29EAD51300ED3798 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8FF31A29EAD51300ED3798 /* APIClient.swift */; };
+		2D8FF32629EB7BF800ED3798 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8FF32529EB7BF800ED3798 /* User.swift */; };
+		2D8FF32829EB7F7F00ED3798 /* UserListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8FF32729EB7F7F00ED3798 /* UserListState.swift */; };
+		2D8FF32A29EB931900ED3798 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8FF32929EB931900ED3798 /* UserListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,11 @@
 		2D44F67929E3049F005D63BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2D44F67B29E304A1005D63BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D44F67E29E304A1005D63BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2D8FF31729EAD48100ED3798 /* CounterViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewSample.swift; sourceTree = "<group>"; };
+		2D8FF31A29EAD51300ED3798 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		2D8FF32529EB7BF800ED3798 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2D8FF32729EB7F7F00ED3798 /* UserListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListState.swift; sourceTree = "<group>"; };
+		2D8FF32929EB931900ED3798 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D44F68729E3052F005D63BA /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +65,8 @@
 			children = (
 				2D44F67729E3049F005D63BA /* TCASampleApp.swift */,
 				2D44F67929E3049F005D63BA /* ContentView.swift */,
+				2D8FF31929EAD4F100ED3798 /* UserListSample */,
+				2D8FF32B29EB9AB200ED3798 /* CounterViewSample */,
 				2D44F67B29E304A1005D63BA /* Assets.xcassets */,
 				2D44F67D29E304A1005D63BA /* Preview Content */,
 			);
@@ -65,6 +79,25 @@
 				2D44F67E29E304A1005D63BA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2D8FF31929EAD4F100ED3798 /* UserListSample */ = {
+			isa = PBXGroup;
+			children = (
+				2D8FF31A29EAD51300ED3798 /* APIClient.swift */,
+				2D8FF32729EB7F7F00ED3798 /* UserListState.swift */,
+				2D8FF32529EB7BF800ED3798 /* User.swift */,
+				2D8FF32929EB931900ED3798 /* UserListView.swift */,
+			);
+			path = UserListSample;
+			sourceTree = "<group>";
+		};
+		2D8FF32B29EB9AB200ED3798 /* CounterViewSample */ = {
+			isa = PBXGroup;
+			children = (
+				2D8FF31729EAD48100ED3798 /* CounterViewSample.swift */,
+			);
+			path = CounterViewSample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +116,9 @@
 			dependencies = (
 			);
 			name = TCASample;
+			packageProductDependencies = (
+				2D44F68629E3052F005D63BA /* ComposableArchitecture */,
+			);
 			productName = TCASample;
 			productReference = 2D44F67429E3049F005D63BA /* TCASample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +147,9 @@
 				Base,
 			);
 			mainGroup = 2D44F66B29E3049F005D63BA;
+			packageReferences = (
+				2D44F68529E3052F005D63BA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 2D44F67529E3049F005D63BA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D8FF32A29EB931900ED3798 /* UserListView.swift in Sources */,
 				2D44F67A29E3049F005D63BA /* ContentView.swift in Sources */,
+				2D8FF32829EB7F7F00ED3798 /* UserListState.swift in Sources */,
 				2D44F67829E3049F005D63BA /* TCASampleApp.swift in Sources */,
+				2D8FF31829EAD48100ED3798 /* CounterViewSample.swift in Sources */,
+				2D8FF32629EB7BF800ED3798 /* User.swift in Sources */,
+				2D8FF31B29EAD51300ED3798 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +383,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D44F68529E3052F005D63BA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D44F68629E3052F005D63BA /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D44F68529E3052F005D63BA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D44F66C29E3049F005D63BA /* Project object */;
 }
